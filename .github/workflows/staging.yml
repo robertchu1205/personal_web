@@ -23,6 +23,12 @@ jobs:
           # ref: 'dev'
           submodules: true  # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      
+      - name: Check tag
+        # if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          TAG_NAME="${GITHUB_REF##refs/tags/}"
+          echo "::set-output name=tag_name::${TAG_NAME}"
 
       - name: Prepare New Version
         id: prepare_new_version
