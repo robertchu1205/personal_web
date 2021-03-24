@@ -44,7 +44,11 @@ jobs:
         run: |
           LAST_VER=$(eval "git log -1 --pretty=%B | tr -d -c '[0-9 .]'")
           IFS='.' read -a ARR <<< "$LAST_VER"
-          NEW_VER="${ARR[0]}.${ARR[1]}.$((${ARR[2]} + 1))"
+          if [ $((${ARR[2]} + 1)) > 5 ]; then
+            NEW_VER="${ARR[0]}.${ARR[1]}.$((${ARR[2]} + 1))"
+          else
+            NEW_VER="${ARR[0]}.$((${ARR[1]} + 1)).0"
+          fi
           echo "$LAST_VER $NEW_VER"
           echo "::set-output name=new_ver::${NEW_VER}"
 
