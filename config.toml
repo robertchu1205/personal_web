@@ -1,0 +1,69 @@
+baseURL = "/"
+relativeURLs = true
+# uglyURLs = true
+languageCode = "en-us"
+title = "ChuZhu"
+theme = "erblog"
+paginate = 3
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+
+[params]
+    version = "0.1.0"
+    description = "🐷"
+    author = "Robert Chu"
+    portrait = "/img/chuchu.jpg"
+    logo = "/img/chuchu-logo.jpg"
+    bio = """
+    <p> This is 朱朱 from Taiwan, or you can call me Robert. </p>
+    """
+
+[[menu.main]]
+    identifier = "post"
+    name = "Post"
+    url = "/post/"
+    weight = 1
+
+[[menu.main]]
+   identifier = "zone"
+   name = "Timeline"
+   url = "/zone/"
+   weight = 1
+
+[[menu.main]]
+   identifier = "test-devops"
+   name = "Target"
+   url = "/test-devops/"
+   weight = 1
+
+# [[menu.main]]
+#    name = "Gallery"
+#    url = "/gallery/"
+#    weight = 2
+
+[[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[[menu.icon]]
+    url = "mailto:robert010256@gmail.com"
+    name = "envelope-o"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/robertchu1205"
+    name = "linkedin"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/robertchu1205"
+    name = "github"
+    weight = 1
