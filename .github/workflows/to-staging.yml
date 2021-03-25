@@ -2,10 +2,10 @@ name: deploy-latest-dev-to-site
 
 on:
   push:
-    # branches:
-    #   - dev  # Set a branch to deploy
-    #   - '!develop'
-    #   - '!staging'
+    branches:
+      - dev  # Set a branch to deploy
+      - '!develop'
+      - '!staging'
     tags:
       - '*.*.*' # from .env of dev
       - '!'
