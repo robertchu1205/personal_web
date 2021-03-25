@@ -10,7 +10,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
 [params]
-    version = "0.1.0"
+    version = "0.1.4"
     description = "🐷"
     author = "Robert Chu"
     portrait = "/img/chuchu.jpg"
