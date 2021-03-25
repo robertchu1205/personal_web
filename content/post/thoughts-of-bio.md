@@ -35,7 +35,7 @@ categories = [
 - functions strong and documents solid
 
 ### Workflows as below
-![](./workflows.jpeg)
+![](/img/workflows.jpeg)
 
 #### branchs working rules
 - develop
@@ -51,13 +51,12 @@ categories = [
     - new staging version would be showed in the footer of the site
 
 ### troubleshooting
-1. schedule in github action (detail showed below)
+1. schedule in github action
     - too slow to use it in CD; use jenkins, cronhub or physical servers instead
+    - crontab -l ![](/img/server-cd.png)
 1. trigger continously if related
     - seperated yml files restricted by some specific branches only, like main or master
 1. schedule in github action
     - too slow to use it in CD; use jenkins, cronhub or physical servers instead
 1. sites redirect incorrectly
     - url becoms directory if uglyURLs is true; not found if relativeURLs is false
-
-![](./server-cd.png)
