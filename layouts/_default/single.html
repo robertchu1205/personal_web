@@ -3,10 +3,10 @@
     {{ $related := .Site.RegularPages.Related . | first 5 }}
 
     <div class="layui-row layui-col-space10">
-        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+        <div class="{{ if not $related }}layui-col-md12{{else}}layui-col-md8{{end}} layui-col-sm12 layui-col-xs12">
             <div class="layui-card single-card">
                 <br />
-                <blockquote class="self-elem-quote {{if isset $.Site.Params "quote"}}self-elem-quote-bg-{{index $.Site.Params.quote}}{{end}} markdown-body single-title" >
+                <blockquote class="layui-elem-quote markdown-body single-title" >
                     <h1>{{ .Title }}</h1>
                     {{partial "info" .}}
                 </blockquote>
@@ -17,18 +17,17 @@
             </div>
         </div>
 
+        {{ if $related }}
         <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
-            {{ if $related }}
             <div class="layui-card single-card">
-                <h2 class="single-title">Relevant Topics</h2>
+                <h1 class="single-title">Relevant Topics</h1>
                 {{ with $related }}
                 	{{ range . }}
                     <div style="margin-left: 10px;">
-                        <blockquote class="self-elem-quote {{if isset $.Site.Params "quote"}}self-elem-quote-bg-{{index $.Site.Params.quote}}{{end}}" style="background-color:#FFFFFF;margin-top: 10px;">
-                            <a href="{{.RelPermalink}}">
-                                <h3 class="">{{.Title}}</h3>
+                        <blockquote class="layui-elem-quote" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="{{.Permalink}}">
+                                <h2 class="">{{.Title}}</h2>
                             </a>
-                            
                             {{partial "info" .}}
                         </blockquote>
                     </div>
@@ -36,26 +35,8 @@
                 {{ end }}
                 <br />
             </div>
-            {{ end }}
-
-            <div class="layui-card single-card">
-                <h2 class="single-title">Recent Posts</h2>
-            {{ with (.Site.GetPage "section" "post")  }}
-                {{range first 5 .Pages.ByDate.Reverse}}
-                <div style="margin-left: 10px;">
-                    <blockquote class="self-elem-quote {{if isset $.Site.Params "quote"}}self-elem-quote-bg-{{index $.Site.Params.quote}}{{end}}" style="background-color:#FFFFFF;margin-top: 10px;">
-                    <a href="{{.RelPermalink}}">
-                        <h3 class="">{{.Title}}</h3>
-                    </a>
-                    {{ partial "info" .}}
-                    </blockquote>
-                </div>
-                {{end}}
-            {{ end }}
-            <br />
-            </div>
         </div>
-
+        {{ end }}
     </div>
 </div>
 

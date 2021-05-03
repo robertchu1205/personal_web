@@ -5,10 +5,8 @@
 <div class="layui-fluid list-show" >
     <div class="layui-row"> 
         <div class="layui-col-md7 layui-col-sm6 layui-col-xs12">
-            <div class="list-show-title">
-                <h3>It's me who adept at learning new topics and facing challenges.
-                    When dealing issues, I have abilities of rational problem solving 
-                    and effective negotiating.</h3>
+            <div class="list-show-title" style="text-align:left;">
+                <h3>{{safeHTML .Site.Params.zonebio}}</h3>
             </div>
         </div>
         <div class="layui-col-md5 layui-col-sm6 layui-col-xs12" style="text-align:center;">
@@ -38,7 +36,7 @@
             <li class="layui-timeline-item">
               <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
               <div class="layui-timeline-content layui-text">
-                <h3 class="layui-timeline-title">{{.Date.Format "2006-01-02"}}</h3>
+                <h3 class="layui-timeline-title">{{.Date.Format "2006-01"}}</h3>
                 <h1 class="layui-title">{{.Title}}</h1>
                 <div class="layui-card-body markdown-body">
                     {{ .Content }}

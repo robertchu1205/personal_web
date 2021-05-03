@@ -4,43 +4,29 @@ relativeURLs = true
 languageCode = "en-us"
 title = "ChuZhu"
 theme = "erblog"
-paginate = 3
+paginate = 7
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
 [params]
-    version = "0.2.3"
-    description = "🐷"
+    version = "0.2.4"
+    description = " "
     author = "Robert Chu"
     portrait = "/img/chuchu.jpg"
     logo = "/img/chuchu-logo.jpg"
     bio = """
-    <p> This is 朱朱 from Taiwan, or you can call me Robert. </p>
+        I adept at learning new topics and facing challenges. </br>
+        When dealing issues, I have abilities of rational problem solving and effective negotiating.
     """
-
-[[menu.main]]
-    identifier = "post"
-    name = "Post"
-    url = "/post/"
-    weight = 1
-
-[[menu.main]]
-   identifier = "zone"
-   name = "Timeline"
-   url = "/zone/"
-   weight = 1
-
-[[menu.main]]
-   identifier = "test-devops"
-   name = "Target"
-   url = "/test-devops/"
-   weight = 1
-
-# [[menu.main]]
-#    name = "Gallery"
-#    url = "/gallery/"
-#    weight = 2
+    zonebio = """
+        This is 朱澔然 from Taiwan, or you can call me Robert. </br>
+        I love to explore myself and bring positive impacts to the world. </br>
+        Therefore, I volunteered in India for two months in 2016 and exchanged in Finland for a semester in 2018. </br>
+        it made me a easy-going and adaptive person with broad international horizon. </br>
+        As a developer from 2019, 
+        I helped Wistron Cooperation design AI inference system and build CICD processes.
+    """
 
 [[menu.main]]
     identifier = "home"
@@ -48,10 +34,33 @@ footnoteReturnLinkContents = "^"
     url = "/"
     weight = 10
 
+[[menu.main]]
+    identifier = "post"
+    name = "Post"
+    url = "/post/"
+    weight = 2
+
+[[menu.main]]
+   identifier = "zone"
+   name = "ME"
+   url = "/zone/"
+   weight = 1
+
+# [[menu.main]]
+#    identifier = "test-devops"
+#    name = "Target"
+#    url = "/test-devops/"
+#    weight = 1
+
+# [[menu.main]]
+#    name = "Gallery"
+#    url = "/gallery/"
+#    weight = 2
+
 [taxonomies]
 category = "categories"
 tag = "tags"
-series = "series"
+# series = "series"
 
 [[menu.icon]]
     url = "mailto:robert010256@gmail.com"
