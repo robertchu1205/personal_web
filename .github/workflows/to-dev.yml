@@ -2,8 +2,11 @@ name: dev-create-md
 
 on:
   push:
-    branches:
-      - develop  # Set a branch to deploy
+    # branches:
+    #   - develop  # Set a branch to deploy
+    tags:
+      - '*.*.*'
+      - '!'
   # schedule: # too slow, abondoned
   #   - cron: '*/10 * * * *' # every 10min
 
