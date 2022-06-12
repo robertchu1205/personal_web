@@ -2,7 +2,7 @@ baseURL = "/"
 relativeURLs = true
 # uglyURLs = true
 languageCode = "en-us"
-title = "ChuZhu"
+title = "朱Chu's Blog"
 theme = "erblog"
 paginate = 7
 DefaultContentLanguage = "en"
@@ -23,9 +23,10 @@ footnoteReturnLinkContents = "^"
         This is 朱澔然 from Taiwan, or you can call me Robert. </br>
         I love to explore myself and bring positive impacts to the world. </br>
         Therefore, I volunteered in India for two months in 2016 and exchanged in Finland for a semester in 2018. </br>
-        it made me a easy-going and adaptive person with broad international horizon. </br>
-        As a developer from 2019, 
-        I helped Wistron Cooperation design AI inference system and build CICD processes.
+        it made me an easy-going and adaptive person with broad international horizon. </br>
+        As a developer from 2019, I helped Wistron Cooperation design AI inference system and build CICD processes.
+        Now, I'm a senior Devops in Aqumon who just is qualified by CKA. </br>
+        Look forward doing enthusing things, such as contents making and experiences sharing.
     """
 
 [[menu.main]]
@@ -68,9 +69,19 @@ tag = "tags"
     weight = 1
 
 [[menu.icon]]
-    url = "https://github.com/robertchu1205"
-    name = "linkedin"
+    url = "https://m.youtube.com/channel/UCkjlUCuvlJ4uXXW4vuu3CxQ"
+    name = "youtube"
     weight = 1
+
+[[menu.icon]]
+    url = "https://www.instagram.com/chubai_viajar/"
+    name = "instagram"
+    weight = 1
+
+#[[menu.icon]]
+#    url = "https://www.linkedin.com/in/hao-jan-c-92b785177"
+#    name = "linkedin"
+#    weight = 1
 
 [[menu.icon]]
     url = "https://github.com/robertchu1205"

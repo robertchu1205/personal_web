@@ -6,12 +6,10 @@ description = "Some thoughts and reasons of this site"
 tags = [
     "devops",
     "sre",
-    "reasons",
     "thoughts",
 ]
 categories = [
     "devops",
-    "sre",
 ]
 +++
 
