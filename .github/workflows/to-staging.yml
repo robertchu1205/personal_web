@@ -66,7 +66,7 @@ jobs:
           publish_dir: .
           publish_branch: staging
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          commit_message: 'Dev to Staging: ${{GITHUB_REF##refs/tags/}}'
+          commit_message: 'Dev to Staging: ${{github.event.head_commit.message}}'
           # tag_name: ${{GITHUB_REF##refs/tags/}}
           # tag_message: 'site update: ${{GITHUB_REF##refs/tags/}}'
 
